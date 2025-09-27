@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="student.css" />
+</head>
+<body>
+    <div id="login-container">
+        <div class="login-box">
+            <div class="logo" data-text="SmartFlex">SmartFlex</div>
+            <h2>Student Login</h2>
+            <p id="error-message" class="hidden">Invalid username or password.</p>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="e.g., avigupta30">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="e.g., 12345678">
+            </div>
+            <div class="login-options">
+                <label class="remember-me">
+                    <input type="checkbox" id="remember-me">
+                    Remember Me
+                </label>
+            </div>
+            <button id="login-btn">Login</button>
+        </div>
+    </div>
+
+    <div id="dashboard-container" class="hidden">
+        <div class="container">
+            <aside class="sidebar">
+                <div class="logo" data-text="SmartFlex">SmartFlex</div>
+                
+                <div class="theme-switcher-container">
+                    <label class="theme-switcher">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li class="active"><a href="#" data-target="dashboard-section">Dashboard</a></li>
+                        <li><a href="#" data-target="my-courses-section">My Courses</a></li>
+                        <li><a href="#" data-target="attendance-section">Attendance</a></li>
+                        <li><a href="#" data-target="classroom-section">Classroom</a></li>
+                    </ul>
+                </nav>
+                <button class="logout" id="logout-btn">Logout</button>
+            </aside>
+
+            <main class="main-content">
+                <header class="header">
+                    <button id="back-to-main" class="back-btn hidden">← Back</button>
+                    <h1 id="main-header-title">Student Dashboard</h1>
+                    <button class="mode-btn">Student Mode</button>
+                    <div class="profile-pic">
+                        <img src="https://i.pravatar.cc/40" alt="Profile Picture" />
+                    </div>
+                </header>
+
+                <div id="dashboard-section" class="view-container active">
+                    <section class="dashboard-cards">
+                        <div class="card enrolled"><h3>TOTAL COURSES ENROLLED</h3><p>4</p></div>
+                        <div class="card contacted"><h3>TOTAL FACULTY CONTACTED</h3><p>6</p></div>
+                        <div class="card upcoming"><h3>UPCOMING CLASSES TODAY</h3><p>4</p></div>
+                    </section>
+                    <section class="schedule-container">
+                        <div class="schedule-header"><h2>Class Schedule</h2><div class="subject-colors"><span>Subject Colors:</span><span class="color-box ec201"></span> EC201<span class="color-box ec207"></span> EC207<span class="color-box ec209"></span> EC209<span class="color-box lab"></span> LAB</div></div>
+                        <div class="schedule-grid">
+                            <div class="time-slot"></div><div class="time-slot">8:00 AM</div><div class="time-slot">9:00 AM</div><div class="time-slot">10:00 AM</div><div class="time-slot">11:00 AM</div><div class="time-slot">12:00 PM</div><div class="time-slot">1:00 PM</div><div class="time-slot">2:00 PM</div><div class="time-slot">3:00 PM</div><div class="time-slot">4:00 PM</div><div class="time-slot">5:00 PM</div>
+                            <div class="day-header">Monday</div><div class="day-header">Tuesday</div><div class="day-header">Wednesday</div><div class="day-header">Thursday</div><div class="day-header">Friday</div>
+                            <div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div><div class="grid-cell-bg"></div>
+                            <div class="class-entry ec201" style="grid-area: 4 / 2 / 5 / 3;"><strong>EC201 (L)</strong><span>Prof. JP</span><em>Room: AB-1-101</em></div><div class="class-entry ec207" style="grid-area: 5 / 2 / 6 / 3;"><strong>EC207 (L)</strong><span>Prof. MP</span><em>Room: AB-1-107</em></div><div class="class-entry lab" style="grid-area: 6 / 2 / 7 / 3;"><strong>G1 LABS</strong><span>EC201, EC207, EC209</span><em>DE/EDC-II/TELECOM</em></div><div class="class-entry ec201" style="grid-area: 8 / 2 / 9 / 3;"><strong>EC201 (L)</strong><span>Prof. MSC</span><em>Room: AB-1-101</em></div><div class="class-entry ec209" style="grid-area: 9 / 2 / 10 / 3;"><strong>EC209 (L)</strong><span>Prof. MSC</span><em>Room: AB-1-101</em></div><div class="class-entry ec209" style="grid-area: 10 / 2 / 11 / 3;"><strong>EC209 (L)</strong><span>Prof. SM</span><em>Room: TW2-TF2</em></div><div class="class-entry lab" style="grid-area: 6 / 3 / 8 / 4;"><strong>G2 LABS</strong><span>EC201, EC207, EC209</span><em>DE/EDC-II/TELECOM</em></div><div class="class-entry ec201" style="grid-area: 10 / 3 / 11 / 4;"><strong>EC201 (L)</strong><span>Prof. RK</span><em>Room: AB-1-101</em></div><div class="class-entry ec201" style="grid-area: 11 / 3 / 12 / 4;"><strong>EC201 (TU)</strong><span>Group 1 / Prof. RK</span><em>Room: AB-1-101</em></div><div class="class-entry ec201" style="grid-area: 3 / 4 / 4 / 5;"><strong>EC201 (L)</strong><span>Prof. RK</span><em>Room: AB-1-101</em></div><div class="class-entry ec201" style="grid-area: 4 / 4 / 5 / 5;"><strong>EC201 (L)</strong><span>Prof. JP</span><em>Room: AB-1-101</em></div><div class="class-entry ec209" style="grid-area: 5 / 4 / 6 / 5;"><strong>EC209 (L)</strong><span>Prof. MSC</span><em>Room: AB-1-101</em></div><div class="class-entry lab" style="grid-area: 6 / 4 / 8 / 5;"><strong>G1/G2/G3 LABS</strong><span>EC201, EC209, EC207</span><em>DE/TELECOM/EDC-II</em></div><div class="class-entry ec201" style="grid-area: 4 / 5 / 5 / 6;"><strong>EC201 (L)</strong><span>Prof. JP</span><em>Room: AB-1-101</em></div><div class="class-entry ec207" style="grid-area: 5 / 5 / 6 / 6;"><strong>EC207 (L)</strong><span>Prof. MP</span><em>Room: AB-1-107</em></div><div class="class-entry ec209" style="grid-area: 6 / 5 / 7 / 6;"><strong>EC209 (L)</strong><span>Prof. SM</span><em>Room: AB-1-108</em></div><div class="class-entry ec201" style="grid-area: 8 / 5 / 9 / 6;"><strong>EC201 (L)</strong><span>Prof. SM</span><em>Room: AB-1-108</em></div><div class="class-entry ec201" style="grid-area: 10 / 5 / 11 / 6;"><strong>EC201 (TU)</strong><span>Group 2 / Prof. RK</span><em>Room: AB-1-108</em></div><div class="class-entry lab" style="grid-area: 4 / 6 / 6 / 7;"><strong>G1/G2 LABS</strong><span>EC201, EC209</span><em>DE/TELECOM</em></div><div class="class-entry ec209" style="grid-area: 6 / 6 / 7 / 7;"><strong>EC209 (L)</strong><span>Prof. SM</span><em>Room: AB-1-108</em></div><div class="class-entry ec207" style="grid-area: 8 / 6 / 9 / 7;"><strong>EC207 (L)</strong><span>Prof. MP</span><em>Room: AB-1-107</em></div>
+                        </div>
+                    </section>
+                    <section class="bottom-panels">
+                        <div class="faculty-leave"><h3>Faculty on Leave</h3><ul><li><img src="https://i.pravatar.cc/30?img=12" alt="Faculty" /><span>Prof. JP</span><span class="leave-status">On Leave</span></li><li><img src="https://i.pravatar.cc/30?img=15" alt="Faculty" /><span>Prof. RK</span><span class="leave-status">On Leave</span></li></ul></div>
+                        <div class="system-advisory">
+                            <h3>System Advisory</h3>
+                            <div class="tabs"><button class="tab active" data-tab="today">Today</button><button class="tab" data-tab="tomorrow">Tomorrow</button></div>
+                            <div class="tab-content"><div id="today" class="content active"><div class="weather-icon" id="today-weather-icon">...</div><h4 id="today-weather-desc">Loading Weather...</h4><p><em id="today-campus-status">Please wait.</em></p><small id="today-online-prob">Online Class Probability: --%</small></div><div id="tomorrow" class="content"><div class="weather-icon" id="tomorrow-weather-icon">...</div><h4 id="tomorrow-weather-desc">Loading Weather...</h4><p><em id="tomorrow-campus-status">Please wait.</em></p><small id="tomorrow-online-prob">Online Class Probability: --%</small></div></div>
+                        </div>
+                    </section>
+                    <section class="notifications"><h3>Recent Notifications</h3><ul><li><span>📢</span><strong>Mid-Term Schedule Update</strong><br />The schedule for the upcoming mid-term examinations has been posted.</li><li><span>📝</span><strong>Grade Update: Digital Electronics</strong><br />Quiz 2 grades for Digital Electronics have been posted.</li><li><span>📅</span><strong>Assignment Due: Telecom Lab</strong><br />Telecom Lab report for experiment 3 is due this Friday by 5:00 PM.</li></ul></section>
+                </div>
+                
+                <section id="my-courses-section" class="view-container hidden">
+                    <h2>My Courses</h2>
+                    <div class="course-grid">
+                        <div class="course-card"><div class="course-title"><h3>Digital Electronics</h3><span>EC201</span></div><div class="course-details"><div class="detail-item"><strong>Faculty:</strong><span>Prof. JP</span></div><div class="detail-item"><strong>Credits:</strong><span>4</span></div><div class="detail-item"><strong>Weekly Hours:</strong><span>5 (3L, 2T)</span></div></div></div>
+                        <div class="course-card"><div class="course-title"><h3>EDC-II</h3><span>EC207</span></div><div class="course-details"><div class="detail-item"><strong>Faculty:</strong><span>Prof. MP</span></div><div class="detail-item"><strong>Credits:</strong><span>4</span></div><div class="detail-item"><strong>Weekly Hours:</strong><span>4 (3L, 1T)</span></div></div></div>
+                        <div class="course-card"><div class="course-title"><h3>Telecom Engineering</h3><span>EC209</span></div><div class="course-details"><div class="detail-item"><strong>Faculty:</strong><span>Prof. SM / Prof. MSC</span></div><div class="detail-item"><strong>Credits:</strong><span>3</span></div><div class="detail-item"><strong>Weekly Hours:</strong><span>3 (3L)</span></div></div></div>
+                    </div>
+                </section>
+
+                <section id="attendance-section" class="view-container hidden">
+                    <h2>Subject Attendance</h2>
+                    <div class="attendance-grid">
+                        <div class="attendance-card" data-attended="38" data-total="42"><h3 class="subject-title">EC201 - Digital Electronics</h3><div class="attendance-stats"><span class="attended-count">38 / 42</span><span class="percentage">90.5%</span></div><div class="progress-bar"><div class="progress-bar-fill"></div></div><div class="status">Status: <span class="status-text"></span></div></div>
+                        <div class="attendance-card" data-attended="25" data-total="30"><h3 class="subject-title">EC207 - EDC-II</h3><div class="attendance-stats"><span class="attended-count">25 / 30</span><span class="percentage">83.3%</span></div><div class="progress-bar"><div class="progress-bar-fill"></div></div><div class="status">Status: <span class="status-text"></span></div></div>
+                        <div class="attendance-card" data-attended="35" data-total="45"><h3 class="subject-title">EC209 - Telecom Engineering</h3><div class="attendance-stats"><span class="attended-count">35 / 45</span><span class="percentage">77.8%</span></div><div class="progress-bar"><div class="progress-bar-fill"></div></div><div class="status">Status: <span class="status-text"></span></div></div>
+                        <div class="attendance-card" data-attended="8" data-total="14"><h3 class="subject-title">LAB - All Subjects</h3><div class="attendance-stats"><span class="attended-count">8 / 14</span><span class="percentage">57.1%</span></div><div class="progress-bar"><div class="progress-bar-fill"></div></div><div class="status">Status: <span class="status-text"></span></div></div>
+                    </div>
+                </section>
+                
+                <section id="classroom-section" class="view-container hidden">
+                    <h2>My Classrooms</h2>
+                    <div class="classroom-grid">
+                        <div class="classroom-card" data-classname="Digital Electronics" data-classcode="EC201" data-bg="bg-1" data-prof="Prof. JP" data-prof-img="https://i.pravatar.cc/60?img=12"><div class="card-header bg-1"><h3><a href="#">Digital Electronics</a></h3><span>EC201</span></div><div class="card-body"><img src="https://i.pravatar.cc/60?img=12" alt="Professor JP" /><p class="professor-name">Prof. JP</p></div></div>
+                        <div class="classroom-card" data-classname="EDC-II" data-classcode="EC207" data-bg="bg-2" data-prof="Prof. MP" data-prof-img="https://i.pravatar.cc/60?img=32"><div class="card-header bg-2"><h3><a href="#">EDC-II</a></h3><span>EC207</span></div><div class="card-body"><img src="https://i.pravatar.cc/60?img=32" alt="Professor MP" /><p class="professor-name">Prof. MP</p></div></div>
+                        <div class="classroom-card" data-classname="Telecom Engineering" data-classcode="EC209" data-bg="bg-3" data-prof="Prof. RK" data-prof-img="https://i.pravatar.cc/60?img=15"><div class="card-header bg-3"><h3><a href="#">Telecom Engineering</a></h3><span>EC209</span></div><div class="card-body"><img src="https://i.pravatar.cc/60?img=15" alt="Professor RK" /><p class="professor-name">Prof. RK</p></div></div>
+                        <div class="classroom-card" data-classname="DE/EDC-II/TELECOM LAB" data-classcode="LAB" data-bg="bg-4" data-prof="Prof. SM" data-prof-img="https://i.pravatar.cc/60?img=25"><div class="card-header bg-4"><h3><a href="#">DE/EDC-II/TELECOM LAB</a></h3><span>LAB</span></div><div class="card-body"><img src="https://i.pravatar.cc/60?img=25" alt="Professor SM" /><p class="professor-name">Prof. SM</p></div></div>
+                    </div>
+                </section>
+                
+                <div id="class-detail-view" class="view-container hidden">
+                    <div class="class-detail-header"><h2 id="class-detail-title"></h2><p id="class-detail-code"></p></div>
+                    <nav class="class-detail-tabs"><button class="tab-btn active" data-target="stream-content">Stream</button><button class="tab-btn" data-target="classwork-content">Classwork</button><button class="tab-btn" data-target="people-content">People</button></nav>
+                    <div class="tab-content-container">
+                        <div id="stream-content" class="tab-content-pane active">
+                            <div class="announcement-box"><img src="https://i.pravatar.cc/40" alt="Profile Picture" /><input type="text" placeholder="Announce something to your class"></div>
+                            <div class="stream-post"><div class="post-header"><img src="https://i.pravatar.cc/60?img=12" class="post-prof-img" alt="Professor"/><div><span class="post-author">Prof. JP</span><span class="post-date">Sep 19</span></div></div><div class="post-content"><p>Hello everyone, Quiz 2 grades for Digital Electronics have been posted. Please review them in the grades section.</p></div></div>
+                            <div class="stream-post"><div class="post-header"><img src="https://i.pravatar.cc/60?img=12" class="post-prof-img" alt="Professor"/><div><span class="post-author">Prof. JP</span><span class="post-date">Sep 17</span></div></div><div class="post-content"><p>Reminder: The schedule for the upcoming mid-term examinations has been posted. Please find it in the "Classwork" section under "Materials".</p></div></div>
+                        </div>
+                        <div id="classwork-content" class="tab-content-pane hidden"><div class="classwork-item"><span class="item-icon">📝</span><div class="item-details"><p class="item-title">Assignment 3: Logic Gates</p><p class="item-due-date">Due: Sep 26</p></div></div><div class="classwork-item"><span class="item-icon">📖</span><div class="item-details"><p class="item-title">Mid-Term Examination Schedule</p><p class="item-due-date">Posted: Sep 17</p></div></div></div>
+                        <div id="people-content" class="tab-content-pane hidden"><h3>Teacher</h3><div class="person-item"><img src="https://i.pravatar.cc/60?img=12" id="people-prof-img" alt="Professor"/><span id="people-prof-name">Prof. JP</span></div><h3>Classmates</h3><div class="person-item"><img src="https://i.pravatar.cc/40?img=1" alt="Student"/><span>Alex Doe</span></div><div class="person-item"><img src="https://i.pravatar.cc/40?img=2" alt="Student"/><span>Jane Smith</span></div><div class="person-item"><img src="https://i.pravatar.cc/40?img=3" alt="Student"/><span>Sam Wilson</span></div></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="student.js"></script>
+</body>
+</html>

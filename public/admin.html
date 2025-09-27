@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teacher Dashboard :: SmartFlex</title>
+    <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+    <aside class="sidebar">
+        <div>
+            <div class="logo" data-text="SmartFlex">SmartFlex</div>
+            <div class="user-profile">
+                <span class="user-icon"></span>
+                <span id="teacher-name" class="user-name">Teacher</span>
+            </div>
+            <div class="theme-switcher-container">
+                <label class="theme-switcher">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+        <nav id="sidebar-nav">
+            <ul>
+                <li class="active" data-view="main-dashboard-view">My Schedule</li>
+                <li data-view="classroom-list-view">My Classrooms</li>
+                <li>Student Queries</li>
+            </ul>
+        </nav>
+        <button class="logout">Logout</button>
+    </aside>
+
+    <main class="main-content">
+        <div id="main-dashboard-view" class="view-container active">
+            <section class="top-cards">
+                <div class="card border-cyan"><div class="title">My Courses</div><div id="totalCourses" class="number">0</div></div>
+                <div class="card border-magenta"><div class="title">My Students</div><div id="totalStudents" class="number">0</div></div>
+            </section>
+
+            <section class="timetable-container">
+                <h1>My Class Schedule</h1>
+                <div class="timetable-wrapper">
+                    <div class="schedule-grid" id="schedule-grid"></div>
+                </div>
+            </section>
+
+            <section class="bottom-panels">
+                <div class="faculty-on-leave data-block"><h3>Colleagues on Leave</h3><ul id="facultyOnLeaveList"></ul></div>
+                <div class="weather data-block"><h3>System Advisory</h3><div class="forecast-container" id="forecastContainer"></div></div>
+            </section>
+        </div>
+
+        <div id="classroom-list-view" class="view-container">
+            <header class="view-header">
+                <h1>My Classrooms</h1>
+            </header>
+            <div id="classroom-grid" class="classroom-grid">
+                </div>
+        </div>
+
+        <div id="classroom-detail-view" class="view-container">
+            <header class="view-header detail-header">
+                <button id="back-to-classrooms-btn" class="back-btn">← Back to Classrooms</button>
+                <h1 id="detail-classroom-name">Classroom Name</h1>
+            </header>
+            <div class="classroom-stream-container">
+                <div class="post-announcement-box">
+                    <h3>Post a New Announcement</h3>
+                    <textarea id="announcement-textarea" placeholder="Announce something to the class..."></textarea>
+                    <button id="post-announcement-btn">Post Announcement</button>
+                </div>
+                <div id="stream-content-container">
+                    </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>
